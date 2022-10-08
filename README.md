@@ -6,5 +6,9 @@ A month-long celebration from September 26th - October 31st sponsored by Digital
 
 ## What can You Contribute
 
-You can contribute any of your **valid** coding program in any programming language.
+You can contribute any of your **valid** coding program in **any** programming language.
 
+## What do you Need to Contribute
+
+An account in Github/Gitlab
+Registration in Hacktober Fest 2022

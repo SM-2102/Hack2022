@@ -1,0 +1,42 @@
+//binary search
+#include<stdio.h>
+int binarysearch(int a[],int n,int ele);
+int main()
+{
+	int n,ele,i,val;
+	printf("Enter the size of the array:");
+	scanf("%d",&n);
+	int a[n];
+	printf("Enter array elements: ");
+	for( i=0;i<n;i++)
+	scanf("%d",&a[i]);
+	printf("You enterd the elements :");
+	for(i=0;i<n;i++)
+	printf("%d ",a[i]);
+	printf("Enter the element to be searched: ");
+	scanf("%d",&ele);
+	val=binarysearch(a,n,ele);
+	if(val==-1){
+		printf("Element not found");
+	}
+	else
+	printf("\n The element is found at %d th poition",val);
+}
+int binarysearch(int a[],int n, int ele)
+{
+	int l,r,mid;
+	l=0,r=n-1;
+	
+	while(l<=r)
+	{
+		mid=(l+r)/2;
+		if(a[mid]==ele)
+		return mid;
+		else if(a[mid]<ele)
+		l=mid+1;
+		else
+		r=mid-1;
+	}
+	return -1;
+	
+}

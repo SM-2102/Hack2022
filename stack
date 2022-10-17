@@ -1,0 +1,89 @@
+#define N 5
+#include<stdio.h>
+int stack[N];
+int top=-1;
+ 
+ void push();
+ void pop();
+ void display();
+ 
+ int main()
+ {
+ 	int ch;
+ 	printf("1.push\n2.pop\n3.display\n4.exit");
+ 	while(1)
+ 	{
+	 
+ 	printf("\nEnter the choice");
+ 	scanf("%d",&ch);
+ 	switch(ch)
+ 	{
+ 		case 1:
+ 			push();
+ 			break;
+ 			case 2:
+ 				pop();
+ 				break;
+ 				case 3:
+ 					display();
+ 					break;
+ 					case 4:
+ 						exit(0);
+ 						default:
+ 							printf("\nWrong choice");
+ 					
+	 }
+}
+ }
+ 
+ 
+ void push()
+ {
+ 	int x;
+ 	if(top==N-1)
+ 	{
+ 		printf("overflow condition");
+ 		
+	 }
+	 else
+	 {
+	 	top++;
+	 	printf("\nEnter element to be pushed");
+	 	scanf("%d",&x);
+	 	stack[top]=x;
+	 }
+ }
+ 
+ 
+ void pop()
+ {
+ 	int item;
+ 	if(top==-1)
+ 	{
+ 		printf("\nUnderflow condition");
+ 		
+	 }
+	 else
+	 {
+	 item=stack[top];
+	 top--;
+	 printf("\nThe deleted element is %d",item);	
+	 }
+ }
+ 
+ 
+ void display()
+ {
+ 	int i;
+ 	if(top==-1)
+ 	{
+ 		printf("\nThe stack is empty");
+	 }
+	 else
+	 {
+	 	for(i=top;i>=0;i--)
+	 	{
+	 		printf("%d ",stack[i]);
+		 }
+	 }
+ }
